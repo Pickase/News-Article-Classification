@@ -1,19 +1,35 @@
 # News Article Classification — Machine Learning Project
 
-This project classifies news articles into categories using TF-IDF vectorization and Logistic Regression. It is structured like a real production machine-learning system, with separate modules for preprocessing, feature extraction, training, evaluation, and deployment via a Streamlit web application.
+This project classifies news articles into categories using TF-IDF vectorization and Logistic Regression. It follows a clean, production-style structure with dedicated modules for preprocessing, feature extraction, model training, evaluation, and deployment via Streamlit.
 
 ---
 
 ## Features
 
-- Modular, production-style ML project structure  
-- Text preprocessing and cleaning  
-- TF-IDF vectorization for feature extraction  
+- Modular, industry-style ML project structure  
+- Text cleaning and preprocessing  
+- TF-IDF vectorization  
 - Logistic Regression classifier  
 - Label encoding for multi-class targets  
 - End-to-end training and evaluation pipeline  
-- Streamlit-based UI for real-time predictions  
-- Fully reproducible workflow  
+- Streamlit app for real-time predictions  
+- Reproducible workflow with clear separation of steps  
+
+---
+
+## Accuracy
+
+- **Training Accuracy:** ~89%  
+- **Test Accuracy:** ~86%  
+These values indicate a strong baseline model with good generalization.
+
+---
+
+## Live Streamlit Demo
+
+You can try the model live here:
+
+**https://news-article-classification-xcq5zaje5riai6kxhrrhan.streamlit.app/**
 
 ---
 
@@ -68,7 +84,7 @@ Then run:
 
 python -m src.data_prep
 
-This will clean the text, encode labels, and create train/test splits inside `data/processed/`.
+This will clean text and generate train/test splits inside `data/processed/`.
 
 ---
 
@@ -76,7 +92,7 @@ This will clean the text, encode labels, and create train/test splits inside `da
 
 python -m src.train
 
-This generates:
+This creates:
 
 models/model.pkl  
 models/label_encoder.pkl
@@ -87,19 +103,19 @@ models/label_encoder.pkl
 
 python -m src.evaluate
 
-Outputs include:
+This outputs:
 
-- Accuracy score  
-- Classification report  
-- Confusion matrix  
+- accuracy  
+- classification report  
+- confusion matrix  
 
 ---
 
-### 5. Run the Streamlit prediction app
+### 5. Run the Streamlit app
 
 streamlit run app/app.py
 
-A browser window will open where you can paste a news article and view the predicted category along with class probabilities.
+Paste any news article into the textbox to get the predicted category and probability distribution.
 
 ---
 
@@ -116,15 +132,15 @@ A browser window will open where you can paste a news article and view the predi
 
 ## Highlights
 
-- Clean and modular ML design suitable for portfolio projects  
-- Reusable preprocessing and feature extraction  
-- Training and inference pipelines separated for clarity  
-- Interactive web UI for article classification  
-- Ideal template to scale with more advanced NLP techniques  
+- Modular ML pipeline suitable for real-world deployment  
+- Reusable preprocessing and scalable structure  
+- Clear separation of training, evaluation, and inference  
+- Interactive online demo using Streamlit  
+- Strong baseline accuracy  
+- Ideal starting point for advanced NLP techniques (word embeddings, transformers, etc.)  
 
 ---
 
 ## Author
 
-Pranav Joshi  
-This project was converted from a notebook into a full modular ML system for learning and portfolio use.
+Pranav Joshi
